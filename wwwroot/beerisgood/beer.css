@@ -1,0 +1,11 @@
+button{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+body{
+  background-image: url('beer.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
