@@ -11,7 +11,7 @@ The GitHub Actions workflow has 3 major steps - Terraform Basic Linter, SonarClo
 
 
 The Terraform Basic Linter workflow step will: 
-- execute the Terraform-Lint GitHub Marketplace action: https://github.com/marketplace/actions/terraform-lint
+- check Terraform code syntax by executing the Terraform-Lint GitHub Marketplace action: https://github.com/marketplace/actions/terraform-lint
 - send a message to the Slack channel
 
 
