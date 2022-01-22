@@ -6,7 +6,7 @@ on:
   pull_request:
 jobs:
   sonarcloud:
-    name: SonarCloud
+    name: "SonarCloud"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +19,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   terraform:
     name: "Terraform"
+    needs: "SonarCloud"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
