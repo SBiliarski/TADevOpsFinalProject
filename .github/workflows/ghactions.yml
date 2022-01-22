@@ -1,4 +1,4 @@
-name: "Sonar Static Code Analysis"
+name: "Build"
 on:
   push:
     branches:
@@ -17,16 +17,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-name: "Terraform"
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-
-jobs:
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
