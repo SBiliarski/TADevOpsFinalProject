@@ -29,3 +29,9 @@ The Terraform workflow step will:
 - generate a plan for every pull request
 - apply the configuration when you update the main branch
 - send a message to the Slack channel
+
+Further Improvements
+- Configure the web server with Ansible, Chef, Puppet, connect it to a DB for a more sophisticated solution
+- Improve ChatOps by creating a more detailed Slack message that includes more status messages and allows interaction with the pipeline by e.g. clicking buttons
+- AWS - fine grained IAM, currently root user is used
+- Terraform Cloud - configure variables to be workspace-specific
