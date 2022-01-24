@@ -4,8 +4,9 @@ Sergei Biliarski's final project for Telerik Academy Upskill DevOps course 2021/
 The aim of this project is to showcase a basic CI/CD pipeline that first checks the app code for correct syntax and for vulnerabilities and then builds a simple web server in AWS using Terraform Infrastructure as Code. To demonstrate ChatOps, it reports its progress in a Slack channel using a webhook integration.
 
 
-Terraform will generate a plan on every pull request and only apply it if the pull request is merged. The Terraform code creates and configures a security group and deploys an EC2 instance in AWS using a Ubuntu 12.04 LTS AMI. It configures a very basic Apache webserver with a single "Hello World" index.html using a "user_data" script. When Terraform is finished applying the plan it outputs the public web address of the web server.
+The GitHub action will connect to Terraform Cloud to execute the Terraform code. Terraform will generate a plan on every pull request and only apply it if the pull request is merged. The Terraform code creates and configures a security group and deploys an EC2 instance in AWS using a Ubuntu 12.04 LTS AMI. It configures a very basic Apache webserver with a single "Hello World" index.html using a "user_data" script. When Terraform is finished applying the plan it outputs the public web address of the web server.
 
+![Diagram](https://www.dropbox.com/s/3u6n643amqkyk0k/Diagram.png)
 
 The GitHub Actions workflow has 3 major steps - Terraform Basic Linter, SonarCloud and Terraform. Upon the successful completion of each step a message is sent to a Slack channel.
 
