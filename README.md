@@ -35,3 +35,5 @@ Further Improvements
 - Improve ChatOps by creating a more detailed Slack message that includes more status messages and allows interaction with the pipeline by e.g. clicking buttons
 - AWS - fine grained IAM, currently root user is used
 - Terraform Cloud - configure variables to be workspace-specific
+- Use Packer to pre-package the underlying web server and upload it to an AWS AMI for faster deployment
+
