@@ -6,7 +6,7 @@ The aim of this project is to showcase a basic CI/CD pipeline that first checks 
 
 The GitHub action will connect to Terraform Cloud to execute the Terraform code. Terraform will generate a plan on every pull request and only apply it if the pull request is merged. The Terraform code creates and configures a security group and deploys an EC2 instance in AWS using a Ubuntu 12.04 LTS AMI. It configures a very basic Apache webserver with a single "Hello World" index.html using a "user_data" script. When Terraform is finished applying the plan it outputs the public web address of the web server.
 
-![Diagram](https://previews.dropbox.com/p/thumb/ABYZIVLwEeoRbD-5eP24YlNwwTUYYox9iepD0Qk0Exg2f8o6w1HBbr9EI-gEYHsrByUZ_nLRb3mQ8JvRyvlGurXEeKJBSIZPH0Holm-M8tb4PFpVcBZnNZbYcSg1RtYFKvpRY-PWR2Qkv7YTP7_UzH7RJec5U3mK5fpyeiWOjUkz6H1Et5lqUmo7IrYbpfAZduh02VgmHWXwBVqBhSTj8QGN8hL_TeKSqwmc6zlCvmDBOr6W9FvyZqYSRv-3eq7vFYk_1881quTVo1RU311y8aeh5OL4HHwauegfyhKiM9zdIcEqCL-Tp_tJ5KT3G9hqlNeJGX6uQNfha8HoOhOdpCOdhpDsJP7lFnuUNCXo55Q7hQ/p.png)
+![Diagram](Diagram.png)
 
 The GitHub Actions workflow has 3 major steps - Terraform Basic Linter, SonarCloud and Terraform. Upon the successful completion of each step a message is sent to a Slack channel.
 
