@@ -1,7 +1,7 @@
 # TADevOpsFinalProject
 Sergei Biliarski's final project for Telerik Academy Upskill DevOps course 2021/2022.
 
-#Summary
+# Summary
 The aim of this project is to showcase a basic CI/CD pipeline that first checks the app code for correct syntax and for vulnerabilities and then builds a simple web server in AWS using Terraform Infrastructure as Code. To demonstrate ChatOps, it reports its progress in a Slack channel using a webhook integration.
 
 
@@ -9,21 +9,31 @@ The GitHub action will connect to Terraform Cloud to execute the Terraform code.
 
 ![Diagram](Diagram.png)
 
+# DevOps topics and technologies covered
+- Source control - GitHub
+- Pipelines - GitHub Actions
+- Continuous Integration - Lint and SAST
+- Continuous Delivery - Terraform Cloud with GitHub webhooks
+- ChatOps - Slack integration
+- Public Cloud - AWS EC2, Security groups
+- Infrastructure as Code - Terraform and Terraform Cloud
+
+# Workflow
 The GitHub Actions workflow has 3 major steps - Terraform Basic Linter, SonarCloud and Terraform. Upon the successful completion of each step a message is sent to a Slack channel.
 
 
-The Terraform Basic Linter workflow step will: 
+## The Terraform Basic Linter workflow step will: 
 - check Terraform code syntax by executing the Terraform-Lint GitHub Marketplace action: https://github.com/marketplace/actions/terraform-lint
 - send a message to the Slack channel
 
 
-The SonarCloud workflow step will:
+## The SonarCloud workflow step will:
 - execute if previous step was successful
 - send the code for Static Code Analysis to SonarQube using the SonarQube Scan acion: https://github.com/marketplace/actions/sonarqube-scan
 - send a message to the Slack channel
 
 
-The Terraform workflow step will:
+## The Terraform workflow step will:
 
 - execute if previous step was successful
 - check whether the configuration is formatted properly to demonstrate how you can enforce best practices
@@ -31,7 +41,7 @@ The Terraform workflow step will:
 - apply the configuration when you update the main branch
 - send a message to the Slack channel
 
-Further Improvements
+# Further Improvements
 - Configure the web server with Ansible, Chef, Puppet, connect it to a DB for a more sophisticated solution
 - Improve ChatOps by creating a more detailed Slack message that includes more status messages and allows interaction with the pipeline by e.g. clicking buttons
 - AWS - fine grained IAM, currently root user is used
