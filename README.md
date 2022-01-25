@@ -16,7 +16,7 @@ The GitHub action will connect to Terraform Cloud to execute the Terraform code.
 - Continuous Delivery - Terraform Cloud with GitHub webhooks
 - ChatOps - Slack integration
 - Public Cloud - AWS EC2, Security groups
-- Infrastructure as Code - Terraform and Terraform Cloud
+- Infrastructure as Code - Terraform code in GitHub and Terraform Cloud
 
 # Workflow
 The GitHub Actions workflow has 3 major steps - Terraform Basic Linter, SonarCloud and Terraform. Upon the successful completion of each step a message is sent to a Slack channel.
