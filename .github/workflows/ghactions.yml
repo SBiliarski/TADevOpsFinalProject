@@ -1,6 +1,9 @@
 name: "Build"
 on:
   push:
+    paths:
+      - "**.tf"
+      - "**.yml"
     branches:
       - main
   pull_request:
