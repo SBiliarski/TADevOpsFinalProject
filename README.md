@@ -1,6 +1,7 @@
 # TADevOpsFinalProject
 Sergei Biliarski's final project for Telerik Academy Upskill DevOps course 2021/2022.
 
+#Summary
 The aim of this project is to showcase a basic CI/CD pipeline that first checks the app code for correct syntax and for vulnerabilities and then builds a simple web server in AWS using Terraform Infrastructure as Code. To demonstrate ChatOps, it reports its progress in a Slack channel using a webhook integration.
 
 
