@@ -35,7 +35,7 @@ resource "aws_instance" "web" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "This is my Telerik Academy Upskill DevOps project!!!" > index.html
+              echo "This is my Telerik Academy Upskill DevOps project!" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
 }
